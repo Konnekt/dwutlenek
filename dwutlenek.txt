@@ -1,0 +1,19 @@
+
+  Wtyczka DwuTlenek obiera siê na bibliotece LibTlen2 (poœrednio równie¿ GLib, GNet, 
+Iconv, LibXML2), oraz klasie cJabber (jabber_class).
+  Jabber_class zapewnia po³¹czenie protoko³ów Jabbero-podobnych z architektur¹
+programu Konnekt. Wykorzystywana jest równolegle przez wtyczki DwuTlenek i kJabber.
+  Mo¿e byæ z powodzeniem u¿yta równie¿ podczas implementowania bibliotek innych 
+protoko³ów. Za najlepsz¹ dokumentacjê niech pos³u¿¹ kody Ÿród³owe...
+
+Projekt przygotowywany by³ pod MS Visual Studio 7. Przed u¿yciem pliku projektu,
+proszê zrobiæ jego kopiê i zmieniæ wszystkie œcie¿ki dostêpu, poniewa¿ aktualne
+nie do koñca mog¹ siê zgadzaæ z Wasz¹ ide¹ katalogowania projektów i Ÿróde³ :)
+
+Kontakt:
+dwutlenek@konnekt.info
+
+Informacja o licencyji w pliku license.txt
+
+(C) 2004 Rafa³ Lindemann - www.STAMINA.eu.org - www.KONNEKT.info
+
