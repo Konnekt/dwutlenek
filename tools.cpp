@@ -67,5 +67,5 @@ CStdString iso2cp(const char * buf) {
 }
 CStdString cp2iso(const char * buf) {
 	CStdString s (buf);
-	return _iso2cp((char*)(s.c_str()));
+	return _cp2iso((char*)(s.c_str()));
 }
