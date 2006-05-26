@@ -71,9 +71,9 @@ bool cJabberBase::StartProxy() {
 		return true;
 	char buff [10];
 	CStdString proxy = "CONNECT ";
-	proxy += GetHost();
+	proxy += GetHost(true);
 	proxy += ":";
-	proxy += itoa(GetPort() , buff , 10);
+	proxy += itoa(GetPort(true) , buff , 10);
 	proxy += " HTTP/1.0\r\n";
 	plug->IMDEBUG(DBG_TRAFFIC , "-->> SND_PROXY [%s] >>--" , proxy.c_str());
 	if ((unsigned)send(this->GetSocket() , proxy.c_str() , proxy.size() , 0) < proxy.size())
@@ -124,7 +124,7 @@ void cJabberBase::Connect(bool automated) {
 	}
 	if (thread) 
 		return;
-	thread = (HANDLE)plug->BeginThread(0 , 0 , (cCtrl::fBeginThread)cJabberBase::ListenThread_ , this);
+	thread = (HANDLE)plug->BeginThread("cJabberBase::ListenThread", 0 , 0 , (cCtrl::fBeginThread)cJabberBase::ListenThread_ , this);
 }
 
 void cJabberBase::Disconnect() {
@@ -604,7 +604,7 @@ void cJabberBase::GetUserAndPass(CStdString & user , CStdString & pass) {
 	if (user.empty() || pass.empty()) {
 		sDIALOG_access sda;
 		sda.flag = DFLAG_SAVE;
-		CStdString info = "Podaj login/has³o na serwerze \"" + this->GetHost() + "\"";
+		CStdString info = "Podaj login/has³o na serwerze \"" + this->GetHost(false) + "\"";
 		sda.info = info;
 		CStdString title = this->GetName() + " - Logowanie";
 		sda.title = title;

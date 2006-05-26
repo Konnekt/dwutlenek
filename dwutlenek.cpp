@@ -10,7 +10,7 @@
 
 #include "stdafx.h"
 #include "resource.h"
-#include "../plug_defs/lib.h"
+#include <Konnekt/lib.h>
 
 /*
 #ifdef _DEBUG

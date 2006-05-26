@@ -27,7 +27,7 @@ LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,1,9,0
+ FILEVERSION 0,1,10,0
  PRODUCTVERSION 0,6,0,0
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
@@ -45,9 +45,9 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Stamina"
             VALUE "FileDescription", "Obs³uga sieci Tlen"
-            VALUE "FileVersion", "0.1.9"
+            VALUE "FileVersion", "0.1.10"
             VALUE "InternalName", "DwuTleneK"
-            VALUE "LegalCopyright", "Copyright (C) 2004 Stamina"
+            VALUE "LegalCopyright", "Copyright (C) 2004,2005 Stamina"
             VALUE "OriginalFilename", "DwuTleneK.DLL"
             VALUE "ProductName", "DwuTleneK"
             VALUE "ProductVersion", "0.6"
@@ -66,19 +66,19 @@ END
 //
 
 
-IDI_ST_ONLINE        ICON                    "st_online.ico"
-IDI_ST_OFFLINE        ICON                    "st_offline.ico"
-IDI_ST_AWAY        ICON                    "st_away.ico"
-IDI_ST_NA        ICON                    "st_na.ico"
-IDI_ST_DND        ICON                    "st_dnd.ico"
-IDI_ST_CHAT        ICON                    "st_chat.ico"
-IDI_ST_HIDDEN        ICON                    "st_hidden.ico"
-IDI_ST_CONNECTING        ICON                    "st_connecting.ico"
-//IDI_MT_MESSAGE        ICON                    "mt_message.ico"
-IDI_OVERLAY        ICON                    "overlay.ico"
+IDI_ST_ONLINE        ICON                    "res/st_online.ico"
+IDI_ST_OFFLINE        ICON                    "res/st_offline.ico"
+IDI_ST_AWAY        ICON                    "res/st_away.ico"
+IDI_ST_NA        ICON                    "res/st_na.ico"
+IDI_ST_DND        ICON                    "res/st_dnd.ico"
+IDI_ST_CHAT        ICON                    "res/st_chat.ico"
+IDI_ST_HIDDEN        ICON                    "res/st_hidden.ico"
+IDI_ST_CONNECTING        ICON                    "res/st_connecting.ico"
+//IDI_MT_MESSAGE        ICON                    "res/mt_message.ico"
+IDI_OVERLAY        ICON                    "res/overlay.ico"
 
 
-IDI_LOGO        ICON                    "logo.ico"
+IDI_LOGO        ICON                    "res/logo.ico"
 
 
 // Icon with lowest ID value placed first to ensure application icon

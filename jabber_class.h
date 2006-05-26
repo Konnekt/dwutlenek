@@ -65,7 +65,7 @@ namespace kJabber {
 			return jab->ListenThread();
 		}
 		/** Czy mo¿e nawi¹zaæ po³¹czenie z sieci¹ */
-		virtual bool CanConnect() {return !this->GetHost().empty();}
+		virtual bool CanConnect() {return !this->GetHost(false).empty();}
 		/** Nawi¹zywanie po³¹czenia z sieci¹ */
 		virtual void Connect(bool automated=false);
 		/** W³¹czenie obs³ugi SSL */
@@ -141,8 +141,8 @@ namespace kJabber {
 	/* Interfejs ni¿szego poziomu */
 
 	/* Pobieranie zmiennych i ustawieñ */
-		virtual const CStdString GetHost() = 0;
-		virtual int GetPort() = 0;
+		virtual const CStdString GetHost(bool useReal) = 0;
+		virtual int GetPort(bool useReal) = 0;
 		virtual const CStdString GetUID() = 0;
 		virtual void GetUserAndPass(CStdString & user , CStdString & pass);
 		virtual enSynchDirection CFGsynchDirection() = 0;
@@ -203,6 +203,7 @@ namespace kJabber {
 		__time64_t lastPing;
 		/** U¿ywa poni¿szego loginu/has³a zamiast tych z konfiguracji */
 		CStdString useUser, usePass, useHost;
+
 		/// Zapisuje login/has³o po udanym ³¹czeniu...
 		enum { 
 			supsNo, supsTable=1, supsConfig=2, supsTableAndConfig=3,
